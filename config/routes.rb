@@ -1,6 +1,9 @@
 Bookshelf::Application.routes.draw do
-  resources :shelves
-
+  root :to => 'index#index'
+  scope "/admin" do
+    resources :books
+    resources :shelves 
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,4 +1,5 @@
 class ShelvesController < ApplicationController
+
   # GET /shelves
   # GET /shelves.json
   def index
