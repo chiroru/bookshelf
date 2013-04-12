@@ -1,0 +1,9 @@
+ ja:
+   title:
+     book:
+       list: 本の一覧
+   label:
+     show: 参照
+     edit: 更新
+     remove: 削除
+     add: 登録

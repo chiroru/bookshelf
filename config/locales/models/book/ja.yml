@@ -1,0 +1,9 @@
+ ja:
+  activerecord:
+    models:
+      book: 本             # モデル名
+    attributes:
+      book:                      # モデル名
+        name: 名前               # モデルの属性名 
+        volume: 巻     # モデルの属性名 
+        description: 説明
