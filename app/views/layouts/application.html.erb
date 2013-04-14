@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div id="layout" class="yui3-g">
+    <div id="nav" class="yui3-u">
+      <ul>
+        <li><a href="/">Home<a/></li>
+        <li><a href="/admin/shelves">Shelf</a></li>
+        <li><a href="/admin/books">Book</a></li>
+      </ul>
+    </div>
+    <div id="main" class="yui3-u">
 <%= yield %>
-
+    </div>
+    <div id="extra">
+    </div>
+  </div>
 </body>
 </html>
