@@ -38,3 +38,5 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem "mongrel", ">= 1.2.0.pre2"
+
+gem 'will_paginate'

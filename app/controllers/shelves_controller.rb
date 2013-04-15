@@ -3,7 +3,8 @@ class ShelvesController < ApplicationController
   # GET /shelves
   # GET /shelves.json
   def index
-    @shelves = Shelf.all
+    #@shelves = Shelf.all
+    @shelves = Shelf.paginate(:page => params[:page], :order => 'created_at desc', :per_page => 2)
 
     respond_to do |format|
       format.html # index.html.erb

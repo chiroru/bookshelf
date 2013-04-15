@@ -1,9 +1,10 @@
- ja:
-   title:
-     book:
-       list: 本の一覧
-   label:
-     show: 参照
-     edit: 更新
-     remove: 削除
-     add: 登録
+ja:
+  will_paginate:
+    previous_label: "&lt;"
+    next_label: "&gt;"
+    page_gap: "..."
+  label:
+    show: 参照
+    edit: 更新
+    remove: 削除
+    add: 登録

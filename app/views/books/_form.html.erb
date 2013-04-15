@@ -12,6 +12,9 @@
   <% end %>
 
   <div class="field">
+    <%= collection_select(:book, :shelf_id, @shelves, :id, :name) %>
+  </div>
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>

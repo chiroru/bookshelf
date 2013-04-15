@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20130412141840) do
     t.string   "name"
     t.integer  "volume"
     t.text     "description"
+    t.integer  "shelf_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

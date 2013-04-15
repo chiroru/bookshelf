@@ -1,3 +1,25 @@
 <h1>Bookshelf</h1>
 
-<%= select_tag 'shelf', options_from_collection_for_select(@shelves, :id, :name) %>
+<%= form_for(
+  @book_search_form,
+  :url => {:action => :index},
+  :html => {:method => :get}) do |f| %>
+<%#= select_tag 'shelf_id', options_from_collection_for_select(@shelves, :id, :name) %>
+<%= f.select :shelf_id, @shelves.map{|i| [i.name, i.id]}, {:include_blank => true} %>
+  <%= f.submit 'Search' %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Volume</th>
+    <th>Description</th>
+  </tr>
+  <% @books.each do |book| %> 
+  <tr>
+    <th><%= book.name %></th>
+    <th><%= book.volume%></th>
+    <th><%= book.description%></th>
+  </tr>
+  <% end %>
+</table>

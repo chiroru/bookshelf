@@ -1,5 +1,9 @@
 <h1>Listing shelves</h1>
 
+Total <%=h @shelves.total_entries %>
+Total Page <%=h @shelves.total_pages %>
+Current Page <%=h @shelves.current_page%>
+<%= will_paginate @shelves %>
 <table>
   <tr>
     <th>Name</th>
@@ -8,18 +12,16 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @shelves.each do |shelf| %>
   <tr>
     <td><%= shelf.name %></td>
     <td><%= shelf.description %></td>
-    <td><%= link_to 'Show', shelf %></td>
-    <td><%= link_to 'Edit', edit_shelf_path(shelf) %></td>
-    <td><%= link_to 'Destroy', shelf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to t("label.show"), shelf %></td>
+    <td><%= link_to t("label.edit"), edit_shelf_path(shelf) %></td>
+    <td><%= link_to t("label.remove"), shelf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
+<%= will_paginate @shelves %>
 <br />
-
-<%= link_to 'New Shelf', new_shelf_path %>
+<%= link_to t("label.add"), new_shelf_path %>

@@ -24,6 +24,7 @@ class BooksController < ApplicationController
   # GET /books/new
   # GET /books/new.json
   def new
+    @shelves = Shelf.all
     @book = Book.new
 
     respond_to do |format|
@@ -34,6 +35,7 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
+    @shelves = Shelf.all
     @book = Book.find(params[:id])
   end
 
