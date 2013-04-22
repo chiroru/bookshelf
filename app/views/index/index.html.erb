@@ -4,8 +4,9 @@
   @book_search_form,
   :url => {:action => :index},
   :html => {:method => :get}) do |f| %>
-<%#= select_tag 'shelf_id', options_from_collection_for_select(@shelves, :id, :name) %>
-<%= f.select :shelf_id, @shelves.map{|i| [i.name, i.id]}, {:include_blank => true} %>
+  <%#= select_tag 'shelf_id', options_from_collection_for_select(@shelves, :id, :name) %>
+  <%= f.select :shelf_id, @shelves.map{|i| [i.name, i.id]}, {:include_blank => true} %>
+  <%= f.check_box :latest %>最新刊
   <%= f.submit 'Search' %>
 <% end %>
 

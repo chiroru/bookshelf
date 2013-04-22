@@ -4,12 +4,22 @@ class IndexController < ApplicationController
     @shelves = Shelf.all
     if @book_search_form.shelf_id.blank? then
       logger.error '================='
-      key = @shelves[0].id
-      @books = Book.where(:shelf_id => key)
+      #key = @shelves[0].id
+      #@books = Book.where(:shelf_id => key)
+      @books = Book.all
     else
-      logger.error '------------------' + @book_search_form.shelf_id
       key = @book_search_form.shelf_id
-      @books = Book.where(:shelf_id => key)
+      if @book_search_form.latest == "1" then
+        #@books = []
+        #h = Book.where('shelf_id = :sid', :sid => "#{key}").group("books.name").maximum(:volume)
+        #@books = @books.latest_by_shelf(key)
+        #h.each_pair {|key, value|
+        #  @books.push(Book.find_by_name_and_volume(key, value))
+        #}
+        @books = Book.latest_by_shelf(key)
+      else
+        @books = Book.where(:shelf_id => key)
+      end
     end
 
     respond_to do |format|
