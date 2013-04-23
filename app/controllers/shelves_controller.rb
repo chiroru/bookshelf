@@ -1,4 +1,5 @@
 class ShelvesController < ApplicationController
+  before_filter :authenticate_user!
 
   # GET /shelves
   # GET /shelves.json

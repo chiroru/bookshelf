@@ -16,6 +16,9 @@
       </ul>
     </div>
     <div id="main" class="yui3-u">
+      <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 <%= yield %>
     </div>
     <div id="extra">

@@ -1,4 +1,6 @@
 class IndexController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
     @book_search_form = BookSearchForm.new params[:book_search_form]
     @shelves = Shelf.all
