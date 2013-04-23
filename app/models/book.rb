@@ -9,4 +9,12 @@ class Book < ActiveRecord::Base
     }
     return @result
   }
+  scope :latest, lambda {
+    @result = []
+    h = group("books.name").maximum(:volume)
+    h.each_pair {|key, value|
+      @result.push(find_by_name_and_volume(key, value))
+    }
+    return @result
+  }
 end

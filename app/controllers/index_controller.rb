@@ -6,7 +6,11 @@ class IndexController < ApplicationController
       logger.error '================='
       #key = @shelves[0].id
       #@books = Book.where(:shelf_id => key)
-      @books = Book.all
+      if @book_search_form.latest == "1" then
+        @books = Book.latest
+      else
+        @books = Book.all
+      end
     else
       key = @book_search_form.shelf_id
       if @book_search_form.latest == "1" then
