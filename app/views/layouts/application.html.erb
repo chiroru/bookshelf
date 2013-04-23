@@ -11,12 +11,14 @@
     <div id="nav" class="yui3-u">
       <ul>
         <li><a href="/">Home<a/></li>
-        <li><a href="/admin/shelves">Shelf</a></li>
-        <li><a href="/admin/books">Book</a></li>
+        <li><a href="/master/shelves">Shelf</a></li>
+        <li><a href="/master/books">Book</a></li>
+        <li><a href="/admin/users">Book</a></li>
       </ul>
     </div>
     <div id="main" class="yui3-u">
       <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+      <%= link_to 'User Info', edit_user_registration_path, :method => :get%>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 <%= yield %>

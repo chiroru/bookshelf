@@ -1,10 +1,15 @@
 Bookshelf::Application.routes.draw do
+  get "users/index"
+
   devise_for :users
 
   root :to => 'index#index'
-  scope "/admin" do
+  scope "/master" do
     resources :books
     resources :shelves 
+  end
+  scope "/admin" do
+    resources :users
   end
 
   # The priority is based upon order of creation:
