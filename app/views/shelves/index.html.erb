@@ -1,9 +1,10 @@
-<h1>Listing shelves</h1>
-
+<h2>Listing shelves</h2>
+<p>
 Total <%=h @shelves.total_entries %>
 Total Page <%=h @shelves.total_pages %>
 Current Page <%=h @shelves.current_page%>
 <%= will_paginate @shelves %>
+</p>
 <table>
   <tr>
     <th>Name</th>

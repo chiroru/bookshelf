@@ -17,9 +17,12 @@ Bookshelf::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => 'smtp.ctc-g.co.jp',
-    :port => 25,
-    :domain => 'ctc-g.co.jp',
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :user_name => 'smts1008@gmail.com',
+    :password => 'shin1008',
+    :authentication => 'plain',
+    :enable_starttls_auto => true
   }    
   config.action_mailer.default_url_options = {
     :host => 'localhost:3000'

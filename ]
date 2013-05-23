@@ -1,5 +1,4 @@
 <h2>Index</h2>
-<p>
 <%= form_for(
   @book_search_form,
   :url => {:action => :index},
@@ -9,7 +8,6 @@
   <%= f.check_box :latest %>最新刊
   <%= f.submit 'Search' %>
 <% end %>
-</p>
 <div>
 <table>
   <tr>

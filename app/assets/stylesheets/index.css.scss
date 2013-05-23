@@ -1,3 +1,70 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{ margin: 0;padding: 0}
+a { text-decoration : none}
+ul, ol { list-style : none}
+img { vertical-align : top}
+
+html {
+  font-family : verdana, sans-serif;
+  font-size : 100%;
+  line-height : 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 { margin-bottom : 24px}
+h1 {
+  font-size : 36px; 
+  line-height : 1} /* 48px */
+h2 {
+  font-size : 14px;
+  line-height : 1.3333} /* 48px */
+h3 {
+  font-size : 12px;
+  line-height : 1} /* 24px */
+  hgroup h2,h4,h5,h6 {
+  font-size : 12px; /* 16px */
+  line-height : 1.5} /* 24px */
+
+
+header { text-align : center; padding-top : 24px}
+header h1 { margin-bottom : 24px}
+header h2 { color : #62240b}
+
+nav {
+  margin-bottom : 24px;
+  background-color: #7D4934;
+  background: -moz-linear-gradient(top, rgba(81,24,8,0.71) 0%, rgba(91,25,0,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(81,24,8,0.71)), color-stop(100%,rgba(91,25,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(81,24,8,0.71) 0%,rgba(91,25,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(81,24,8,0.71) 0%,rgba(91,25,0,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(81,24,8,0.71) 0%,rgba(91,25,0,1) 100%); /* IE10+ */
+  background: linear-gradient(top, rgba(81,24,8,0.71) 0%,rgba(91,25,0,1) 100%); /* W3C */
+}
+nav ul { overflow : hidden}
+nav ul li { width : 25%; float : left}
+nav ul li a {
+  display : block;
+  color : #d8c2a4;
+  padding : 12px 0}
+nav ul li a:hover {
+  color : white;
+  background-color : #7d4934}
+
+#contents {
+  width : 90%;
+  margin : 0 auto;
+  text-align : center}
+#contents p { 
+  margin-bottom : 24px;
+  text-align : left}
+#contents table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  padding : 24px 0;
+  color : bkack;
+  text-align : center;
+}
